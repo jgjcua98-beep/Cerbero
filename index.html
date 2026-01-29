@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cerbero Servicio Industrial - Ingeniería y Maniobras</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#137fec',
+              'background-light': '#f6f7f8',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      @keyframes pulse-ring {
+        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+      }
+      .whatsapp-pulse { animation: pulse-ring 2s infinite; }
+      
+      .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+      .slide-up { animation: slideUp 0.5s ease-out forwards; }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      
+      .modal-content-scroll { max-height: 80vh; overflow-y: auto; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="bg-background-light text-[#111418] antialiased overflow-x-hidden">
+    <div id="app">
+        <!-- Contenedores que serán llenados por index.js -->
+        <header id="navbar"></header>
+        <main>
+            <section id="hero"></section>
+            <section id="about"></section>
+            <section id="products-grid"></section>
+            <section id="timeline"></section>
+            <section id="testimonials"></section>
+            <section id="contact"></section>
+        </main>
+        <footer id="footer"></footer>
+        
+        <!-- Elementos Flotantes -->
+        <div id="modal-container" class="relative z-[100]"></div>
+        <div id="whatsapp-button"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
