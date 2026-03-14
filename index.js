@@ -7,9 +7,9 @@ const productsData = [
         shortDesc: "Broderson RT-300-2C, Grove RT700E y Terex RT 110 listas para maniobras.",
         longDesc: "Renta integral de grúas con operadores certificados para montaje industrial, obra civil y energías. Equipos todo terreno con alto alcance y capacidad para espacios abiertos o confinados.",
         images: [
-            "grua todo terreno broderson rt-300-2c.png",
-            "Grúa Todo Terreno Grove RT700E.png",
-            "Grúa Todo Terreno Terex RT 110.png"
+            "/grua todo terreno broderson rt-300-2c.png",
+            "/Grúa Todo Terreno Grove RT700E.png",
+            "/Grúa Todo Terreno Terex RT 110.png"
         ],
         isCrane: true,
         cranes: [
